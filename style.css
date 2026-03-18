@@ -196,3 +196,35 @@ footer {
     padding: 50px;
     opacity: 0.6;
 }
+
+/* AJUSTES FINOS */
+
+.hero h1 {
+    line-height: 1.2;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+}
+
+.btn:visited {
+    color: white;
+}
+
+.social-btn:visited {
+    color: white;
+}
+
+.skills-col h3 {
+    margin-bottom: 20px;
+}
