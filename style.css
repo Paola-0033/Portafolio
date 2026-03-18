@@ -191,3 +191,33 @@ footer {
     .about-image { margin-top: 50px; }
     .skills-col { margin-bottom: 50px; }
 }
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: white;
+    color: black;
+    transform: translateX(5px);
+}
+
+.info-list li {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
