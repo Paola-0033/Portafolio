@@ -221,3 +221,7 @@ footer {
     margin-bottom: 15px;
     line-height: 1.4;
 }
+
+.about-text p {
+  margin-bottom: 15px;
+}
