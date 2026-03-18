@@ -49,7 +49,7 @@ Marketing Digital · Creación de Contenido · Video y Fotografía
 </div>
 </header>
 
-<section id="about" class="about-section">
+<section id="about" class="about-section fade-in">
 <div class="about-container">
 
 <div class="about-info">
@@ -58,13 +58,21 @@ Marketing Digital · Creación de Contenido · Video y Fotografía
 
 <p class="email-link">paorodriguezhez20@gmail.com</p>
 
-<p class="about-text">
+<div class="about-text">
+
+<p>
 Soy una persona apasionada por el marketing digital y la creación de estrategias publicitarias enfocadas en resultados. Me interesa desarrollar experiencias web que no solo se vean bien, sino que también conecten con las personas y generen valor.
+</p>
 
+<p>
 Cuento con experiencia en desarrollo web utilizando HTML, CSS y React, así como conocimientos básicos en el consumo de APIs. Además, manejo herramientas creativas como Blender para modelado 3D y software de edición como Premiere, After Effects y fotografía digital.
+</p>
 
+<p>
 Me adapto fácilmente a nuevas tecnologías y estoy en constante aprendizaje, enfocándome en áreas que potencien mi crecimiento profesional, especialmente en Digital Ads, creación de contenido y desarrollo de proyectos digitales.
 </p>
+
+</div>
 
 <div class="location">
 <span>MÉXICO - Puebla</span><br>
@@ -80,7 +88,7 @@ Me adapto fácilmente a nuevas tecnologías y estoy en constante aprendizaje, en
 </div>
 </section>
 
-<section id="skills" class="skills-section">
+<section id="skills" class="skills-section fade-in">
 <div class="skills-grid">
 
 <div class="skills-col">
@@ -164,6 +172,7 @@ Me adapto fácilmente a nuevas tecnologías y estoy en constante aprendizaje, en
 <div class="interest-tag">🎨 Dibujo</div>
 <div class="interest-tag">✈️ Viajar</div>
 <div class="interest-tag">🎵 Música</div>
+<div class="interest-tag">⚽ Deporte</div>
 </div>
 
 </div>
@@ -177,11 +186,26 @@ Me adapto fácilmente a nuevas tecnologías y estoy en constante aprendizaje, en
 </footer>
 
 <script>
+// contador visitas
 fetch('https://api.countapi.xyz/hit/paola-portafolio/visitas')
 .then(res => res.json())
 .then(data => {
 document.getElementById('visitas').innerText = 
 'Visitas a esta página: ' + data.value;
+});
+
+// animación scroll
+const elements = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+elements.forEach(el => {
+const top = el.getBoundingClientRect().top;
+const windowHeight = window.innerHeight;
+
+if(top < windowHeight - 100){
+el.classList.add('visible');
+}
+});
 });
 </script>
 
